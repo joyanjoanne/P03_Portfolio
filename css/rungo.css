@@ -1,0 +1,22 @@
+
+.services section {
+  text-align: left;
+}
+.rungo{
+  padding-top:100px;
+}
+.rungo p{
+  padding-top: 20px;
+  line-height: 30px;
+}
+.icon {
+    max-width: 500px;
+    margin: 20px auto;
+    display: block;
+  }
+.distribution{
+  text-align: center;
+}
+.details{
+  padding-top: 50px;
+}
