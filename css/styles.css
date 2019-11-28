@@ -1,52 +1,185 @@
 *{
   font-family: 'Muli', sans-serif;
+  box-sizing: border-box;
   /* font-family: 'Nunito', sans-serif; */
 }
+
+
 .icon {
   max-width: 500px;
-  margin: 30px auto;
+  margin: 75px auto;
   display: block;
-}
-.container h2{
-font-family: 'Nunito', sans-serif;
+  width: 100%;
 }
 
+.scroll-snap_container  {
+  scroll-snap-type: y proximity;
+  height: 100vh;
+  overflow: auto;
+  /* scrollbar-width: none; */
+  -ms-overflow-style: none;
+}
+.scroll-snap_container::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-snap_element__center {
+  scroll-snap-align: center;
+  padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+/* .container h2{
+font-family: 'Nunito', sans-serif;
+padding-top: 130px;
+line-height: 100px;
+letter-spacing: 50px;
+text-align: center;
+}  */
+
+
+/* .center h2{
+  padding-top: 180px;
+  line-height: 100px;
+  letter-spacing: 50px;
+  text-align: center;
+
+} */
+.container p{
+  font-family: 'Nunito', sans-serif;
+  padding-top: 0px;
+  line-height: 50px;
+  /* letter-spacing: 10px; */
+  /* text-align: center; */
+}
+.title p{
+  font-family: 'Nunito', sans-serif;
+  padding-top: 0px;
+  line-height: 50px;
+  letter-spacing: 10px;
+  text-align: center;
+}
+.sep{
+  border: 0;
+  width: 3em;
+  height: 1px;
+  align-content:  center;
+  background-color: #c6c6c6;
+}
+.center{
+  margin-bottom: 270px;
+
+}
+h3{
+  color:#337ab7;
+}
+.col-md-6 img{
+  width: 100px;
+  height: auto;
+  padding-bottom: 10px;
+}
+.col-md-8 img{
+  transition: .4s ease-in-out;
+}
+
+
+.col-md-8 img:hover{
+  opacity: .5;
+}
+.services section {
+  text-align: center;
+}
 .services section {
   text-align: center;
 }
 .abc{
-  padding-top: 600px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   align-content: center;
 }
+.abc:last-child {
+  margin-bottom: 200px;
+}
 .contact{
-  padding-top: 100px;
+  margin-top: 100px;
   line-height: 45px;
   /* letter-spacing: 15px; */
 }
 
+.menu{
+  margin: 30px auto;
 
+}
 .menu2 {
 
   margin: 30px auto;
+
 }
 
 .menu2 a{
   margin: 5px;
   padding-left: 100px;
 }
-.center h2{
-  padding-top: 180px;
-  line-height: 100px;
-  letter-spacing: 50px;
-  text-align: center;
 
+@media (max-width: 411px) {
+  .menu2{
+
+  display: flex;
+  margin-left: -70px;
 
 }
+
+}
+
+.center .name-holder h2{
+	display:inline;
+	display: inline-flex;
+	justify-content: space-between;
+	letter-spacing: 1.6em;
+	/* padding-left:0.5em; */
+  font-size: 20px;
+
+}
+.center h2{
+  display:inline;
+  display: inline-flex;
+  justify-content: space-between;
+  letter-spacing: 1.6em;
+  padding-left:1.6em;
+  font-size: 20px;
+  }
+
+
+.center .name-holder {
+    /* display: flex; */
+    /* justify-content: space-around; */
+    text-align: center;
+    /* padding-left:80px; */
+    /* padding-right: 0px; */
+    padding-top: 180px;
+    line-height: 100px;
+}
+
+@media (max-width: 481px) {
+.center .name-holder {
+    /* display: flex; */
+    /* justify-content: space-around; */
+    text-align: center;
+    /* padding-left:80px; */
+    /* padding-right: 0px; */
+    padding-top: 0px;
+}}
+
 body,html  {
   width: 100%;
   min-height: 100%;
   padding: 0;
   margin: 0;
+}
+
+
+.a{
+  color: #337ab7;
 }
 .scroll-downs {
   position: fixed;
@@ -82,4 +215,160 @@ body,html  {
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+
+@-webkit-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-webkit-transform: translateY(20px);
+	}	100% {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+}
+
+@-moz-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-moz-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+}
+
+@-o-keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		-o-transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		-o-transform: translateY(0);
+	}
+}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+.animatable {
+
+  /* initially hide animatable objects */
+  visibility: visible;
+
+  /* initially pause animatable objects their animations */
+  -webkit-animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+/* show objects being animated */
+.animated {
+  visibility: visible;
+
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running;
+}
+
+
+
+.animated.fadeInUp {
+	-webkit-animation-name: fadeInUp;
+	-moz-animation-name: fadeInUp;
+	-o-animation-name: fadeInUp;
+	animation-name: fadeInUp;
+}
+
+.arrow-container {
+  z-index: 999;
+  transform: rotate(180deg) translateY(0em);
+}
+
+.arrow-wrap {
+  position:fixed;
+  z-index:1;
+  left:50%;
+  bottom:5em;
+  margin-left:-5em;
+  background: transparent;
+  border: 1px #C6C6C6;
+  border-radius: 100px;
+  width:10em;
+  height:10em;
+  padding:4em 2em;
+
+  font-size:0.5em;
+  display:block;
+    animation: floating 3s infinite;
+}
+
+.arrow {
+  float:left;
+  position:fixed;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  background: transparent;
+  border-color: #C6C6C6 transparent transparent transparent;
+
+  -webkit-transform:rotate(360deg)
+
+}
+
+.arrow:after {
+  content:'';
+  position:fixed;
+  top:-3.2em;
+  left:-3em;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 3em 3em 0 3em;
+  border-color: #C6C6C6 transparent transparent transparent;
+  background: transparent;
+
+  -webkit-transform:rotate(360deg)
+}
+
+@keyframes floating {
+  from{transform: translate(0, 0px);}
+  65%{transform: translate(0, 20px);}
+  to{transform: translate(0, -0px);}
+
+}
+.footer p{
+    font-family: 'Nunito', sans-serif;
+    padding-top: 10px;
+    padding-bottom: 5em;
+
+    line-height: 50px;
 }
